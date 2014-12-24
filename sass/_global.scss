@@ -1,0 +1,31 @@
+@import "socialicons";
+
+$bg-color: #333;
+$font-color: #fff;
+$highlight-color: #408000;
+$font-stack: "Lato", "Helvetica", "sans-serif";
+
+body {
+	font: 140% $font-stack;
+	background: $bg-color;
+	color: $font-color;
+	padding: 100px;
+}
+
+.header .title {
+	font-size: 150%;
+	text-transform: uppercase;
+}
+
+.social-links {
+	a {
+		@extend .socialicon;
+		color: $font-color;
+		text-decoration: none;
+		font-size: 160%;
+	}
+
+	a:hover {
+		color: $highlight-color;
+	}
+}
