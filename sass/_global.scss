@@ -6,9 +6,9 @@ $highlight-color: #408000;
 $font-stack: "Lato", "Helvetica", "sans-serif";
 
 body {
-	font: 140% $font-stack;
 	background: $bg-color;
 	color: $font-color;
+	font: 140% $font-stack;
 	padding: 100px;
 }
 
@@ -20,9 +20,10 @@ body {
 .social-links {
 	a {
 		@extend .socialicon;
+
 		color: $font-color;
-		text-decoration: none;
 		font-size: 160%;
+		text-decoration: none;
 	}
 
 	a:hover {
