@@ -5,11 +5,20 @@ $font-color: #fff;
 $highlight-color: #408000;
 $font-stack: "Lato", "Helvetica", "sans-serif";
 
+$media-small: "screen and (max-width: 400px)";
+$media-large: "screen and (min-width: 401px)";
+
 body {
 	background: $bg-color;
 	color: $font-color;
 	font: 140% $font-stack;
-	padding: 100px;
+	
+	@media #{$media-small} {
+		padding: 100px 50px;
+	}
+	@media #{$media-large} {
+		padding: 100px;
+	}
 }
 
 .header .title {
@@ -22,8 +31,14 @@ body {
 		@extend .socialicon;
 
 		color: $font-color;
-		font-size: 160%;
 		text-decoration: none;
+	
+		@media #{$media-small} {
+			font-size: 200%;
+		}
+		@media #{$media-large} {
+			font-size: 160%;
+		}
 	}
 
 	a:hover {
