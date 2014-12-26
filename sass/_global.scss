@@ -11,7 +11,8 @@ $media-large: "screen and (min-width: 401px)";
 body {
 	background: $bg-color;
 	color: $font-color;
-	font: 140% $font-stack;
+	font-size: 140%;
+	font-family: $font-stack;
 	
 	@media #{$media-small} {
 		padding: 100px 50px;
