@@ -1,14 +1,15 @@
 #!/usr/bin/env ruby
 
 require 'sinatra'
+require 'haml'
 
 enable :run
 
 
 get '/' do
-	erb :index, :layout => :layout
+	erb :index
 end
 
 get '/haml' do
-	haml '%div.title Hello'
+	haml :index
 end
