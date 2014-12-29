@@ -11,6 +11,10 @@ module MyApp
 			haml :index
 		end
 
+		get '/*' do
+			haml :fourohfour
+		end
+
 		helpers do
 			def link_to href, text, attributes = {}
 				attr_string = attributes.map{ |k,v| "#{k.to_s}=\"#{v.to_s}\""}.join(" ")
