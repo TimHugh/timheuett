@@ -26,6 +26,7 @@ a {
 	color: $font-color;
 	text-decoration: none;
 	cursor: pointer;
+	text-shadow: 4px 4px #222;
 }
 a:hover {
 	color: $highlight-color;
