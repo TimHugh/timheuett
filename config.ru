@@ -1,6 +1,6 @@
 #\ -w -p 3000
 
 require 'rubygems'
-require_relative 'app'
+require './app'
 
 run MyApp::Application
