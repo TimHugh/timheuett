@@ -30,7 +30,7 @@ builder = Rack::Builder.new do
   use Rack::ShowStatus
   use Rack::ShowExceptions
  
-  run Sinatra::Application 
+  run MyApp::Application 
 end
 
 Rack::Handler::FastCGI.run(builder)
