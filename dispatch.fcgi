@@ -29,8 +29,8 @@ require_relative 'app'
 builder = Rack::Builder.new do
   use Rack::ShowStatus
   use Rack::ShowExceptions
-  
-  run Sinatra::Application
+ 
+  run Sinatra::Application 
 end
 
 Rack::Handler::FastCGI.run(builder)
