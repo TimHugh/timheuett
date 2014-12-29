@@ -114,43 +114,44 @@ a {
   color: #fff;
   text-decoration: none;
   cursor: pointer;
+  text-shadow: 4px 4px #222;
 }
 
-/* line 30, ../../sass/_global.scss */
+/* line 31, ../../sass/_global.scss */
 a:hover {
   color: #408000;
 }
 
-/* line 34, ../../sass/_global.scss */
+/* line 35, ../../sass/_global.scss */
 .header .title a {
   font-size: 150%;
   text-transform: uppercase;
 }
 
-/* line 39, ../../sass/_global.scss */
+/* line 40, ../../sass/_global.scss */
 .social-links {
   margin-top: 10px;
 }
 @media screen and (max-width: 400px) {
-  /* line 42, ../../sass/_global.scss */
+  /* line 43, ../../sass/_global.scss */
   .social-links a {
     font-size: 200%;
   }
 }
 @media screen and (min-width: 401px) {
-  /* line 42, ../../sass/_global.scss */
+  /* line 43, ../../sass/_global.scss */
   .social-links a {
     font-size: 160%;
   }
 }
 
-/* line 54, ../../sass/_global.scss */
+/* line 55, ../../sass/_global.scss */
 .error {
   padding-top: 10%;
   text-align: center;
   font-size: 120%;
 }
-/* line 58, ../../sass/_global.scss */
+/* line 59, ../../sass/_global.scss */
 .error .title {
   font-size: 400%;
 }
