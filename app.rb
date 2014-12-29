@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 
 require 'sinatra'
+require 'haml'
 
 enable :run
 
-
 get '/' do
-	erb :index
+	haml :index
 end
 
 helpers do
