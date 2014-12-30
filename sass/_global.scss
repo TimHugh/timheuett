@@ -3,7 +3,7 @@
 $bg-color: #333;
 $font-color: #fff;
 $highlight-color: #408000;
-$font-stack: "Lato", "Helvetica", "sans-serif";
+$font-stack: "Raleway", "Helvetica", "sans-serif";
 
 $media-small: "screen and (max-width: 400px)";
 $media-large: "screen and (min-width: 401px)";
@@ -26,7 +26,7 @@ a {
 	color: $font-color;
 	text-decoration: none;
 	cursor: pointer;
-	text-shadow: 4px 4px #222;
+	// text-shadow: 4px 4px #222;
 }
 a:hover {
 	color: $highlight-color;
@@ -34,6 +34,7 @@ a:hover {
 
 .header .title a {
 	font-size: 150%;
+	font-weight: 200;
 	text-transform: uppercase;
 }
 

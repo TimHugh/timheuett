@@ -94,7 +94,7 @@ body {
   background: #333;
   color: #fff;
   font-size: 140%;
-  font-family: "Lato", "Helvetica", "sans-serif";
+  font-family: "Raleway", "Helvetica", "sans-serif";
 }
 @media screen and (max-width: 400px) {
   /* line 11, ../../sass/_global.scss */
@@ -114,7 +114,6 @@ a {
   color: #fff;
   text-decoration: none;
   cursor: pointer;
-  text-shadow: 4px 4px #222;
 }
 
 /* line 31, ../../sass/_global.scss */
@@ -125,33 +124,34 @@ a:hover {
 /* line 35, ../../sass/_global.scss */
 .header .title a {
   font-size: 150%;
+  font-weight: 200;
   text-transform: uppercase;
 }
 
-/* line 40, ../../sass/_global.scss */
+/* line 41, ../../sass/_global.scss */
 .social-links {
   margin-top: 10px;
 }
 @media screen and (max-width: 400px) {
-  /* line 43, ../../sass/_global.scss */
+  /* line 44, ../../sass/_global.scss */
   .social-links a {
     font-size: 200%;
   }
 }
 @media screen and (min-width: 401px) {
-  /* line 43, ../../sass/_global.scss */
+  /* line 44, ../../sass/_global.scss */
   .social-links a {
     font-size: 160%;
   }
 }
 
-/* line 55, ../../sass/_global.scss */
+/* line 56, ../../sass/_global.scss */
 .error {
   padding-top: 10%;
   text-align: center;
   font-size: 120%;
 }
-/* line 59, ../../sass/_global.scss */
+/* line 60, ../../sass/_global.scss */
 .error .title {
   font-size: 400%;
 }
