@@ -122,7 +122,7 @@ a:hover {
 }
 
 /* line 35, ../../sass/_global.scss */
-.title a {
+.title {
   font-size: 150%;
   font-weight: 200;
   text-transform: uppercase;
