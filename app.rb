@@ -13,6 +13,7 @@ module MyApp
 
 		get '/*' do
 			haml :fourohfour
+			status 404
 		end
 
 		helpers do
