@@ -16,9 +16,12 @@ module MyApp
 		end
 
 		helpers do
-			def link_to href, text, attributes = {}
+			def link_to text, attributes = {}
 				attr_string = attributes.map{ |k,v| "#{k.to_s}=\"#{v.to_s}\""}.join(" ")
-				return "<a href=\"#{href}\" #{attr_string}>#{text}</a>"
+				return "<a #{attr_string}>#{text}</a>"
+			end
+			def list name, items = {}, attributes = {}
+
 			end
 		end
 
