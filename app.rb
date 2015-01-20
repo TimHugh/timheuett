@@ -20,9 +20,7 @@ module MyApp
 				attr_string = attributes.map{ |k,v| "#{k.to_s}=\"#{v.to_s}\""}.join(" ")
 				return "<a #{attr_string}>#{text}</a>"
 			end
-			def list name, items = {}, attributes = {}
 
-			end
 		end
 
 	end
