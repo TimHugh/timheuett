@@ -5,8 +5,6 @@ require 'haml'
 
 module MyApp
 	class Application < Sinatra::Base
-		enable :run
-
 		# route for root
 		get '/' do
 			haml :index
