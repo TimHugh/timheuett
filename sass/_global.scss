@@ -14,12 +14,7 @@ body {
 	font-size: 140%;
 	font-family: $font-stack;
 	
-	@media #{$media-small} {
-		padding: 100px 50px;
-	}
-	@media #{$media-large} {
-		padding: 100px;
-	}
+	padding: 10%;
 }
 
 a {
@@ -32,10 +27,12 @@ a:hover {
 	color: $highlight-color;
 }
 
+
 .title {
 	font-size: 150%;
 	font-weight: 200;
 	text-transform: uppercase;
+	vertical-align: top;
 }
 
 .social-links {
@@ -43,21 +40,33 @@ a:hover {
 
 	a {
 		@extend .socialicon;
-	
-		@media #{$media-small} {
-			font-size: 200%;
-		}
-		@media #{$media-large} {
-			font-size: 160%;
+		font-size: 160%;
+	}
+}
+
+.left-bar {
+	float: left;
+	width: 25%;
+	vertical-align: top;
+	text-align: right;
+}
+
+.content {
+	width: 70%;
+	float: right;
+	vertical-align: top;
+
+	.error {
+		padding-top: 10%;
+		text-align: center;
+		font-size: 120%;
+		.title {
+			font-size: 400%;
 		}
 	}
 }
 
-.error {
-	padding-top: 10%;
-	text-align: center;
-	font-size: 120%;
-	.title {
-		font-size: 400%;
-	}
+.footer {
+	float: right;
+	width: 70%;
 }
