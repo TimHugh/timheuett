@@ -12,8 +12,8 @@ module MyApp
 
 		# anything else gets sent to 404
 		get '/*' do
-			haml :fourohfour
 			status 404
+			haml :fourohfour
 		end
 
 		helpers do
