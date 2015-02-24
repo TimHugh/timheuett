@@ -31,7 +31,9 @@ a:hover {
 
 .left-bar {
   vertical-align: top;
-  text-align: right; }
+  text-align: right;
+  width: 25%;
+  min-width: 200px; }
   .left-bar .title {
     font-size: 150%;
     font-weight: 100;
@@ -40,7 +42,7 @@ a:hover {
   .left-bar .social-links {
     margin-top: 10px; }
     .left-bar .social-links a {
-      font-size: 160%; }
+      font-size: 170%; }
 
 .content {
   width: 70%;
