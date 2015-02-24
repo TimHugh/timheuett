@@ -1,6 +1,8 @@
-@import "compass/css3/font-face";
 
-@include font-face("Mono Social Icons Font", font-files("MonoSocialIconsFont-1.10.woff", "MonoSocialIconsFont-1.10.ttf", "MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont"), "MonoSocialIconsFont-1.10.eot", normal, normal);
+@font-face {
+    font-family: "Mono Social Icons Font";
+    src: url("/fonts/MonoSocialIconsFont-1.10.woff");
+}
 
 .socialicon, a.socialicon:before {
     font-family: "Mono Social Icons Font";
@@ -15,9 +17,3 @@
     -o-font-smoothing: antialiased;
     font-smoothing: antialiased;
 }
-
-// a.socialicon:before {
-//     content: attr(title);
-//     margin-right: 0.3em;
-//     font-size: 130%;
-// }
