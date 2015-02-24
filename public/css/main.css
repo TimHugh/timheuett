@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Mono Social Icons Font";
   src: url("/fonts/MonoSocialIconsFont-1.10.woff"); }
-.socialicon, .social-links a, a.socialicon:before, .social-links a:before {
+.socialicon, .left-bar .social-links a, a.socialicon:before, .left-bar .social-links a:before {
   font-family: "Mono Social Icons Font";
   -webkit-text-rendering: optimizeLegibility;
   -moz-text-rendering: optimizeLegibility;
@@ -18,8 +18,8 @@ body {
   background: #fff;
   color: #666;
   font-size: 140%;
-  font-family: "Raleway", "Helvetica", "sans-serif";
-  padding: 10%; }
+  font-family: "Raleway", "Helvetica Neue", "Helvetica", Sans-Serif;
+  padding: 100px 10%; }
 
 a {
   color: #666;
@@ -29,26 +29,21 @@ a {
 a:hover {
   color: #84c66f; }
 
-.title {
-  font-size: 150%;
-  font-weight: 200;
-  text-transform: uppercase;
-  vertical-align: top; }
-
-.social-links {
-  margin-top: 10px; }
-  .social-links a {
-    font-size: 160%; }
-
 .left-bar {
-  float: left;
-  width: 25%;
   vertical-align: top;
   text-align: right; }
+  .left-bar .title {
+    font-size: 150%;
+    font-weight: 100;
+    text-transform: uppercase;
+    vertical-align: top; }
+  .left-bar .social-links {
+    margin-top: 10px; }
+    .left-bar .social-links a {
+      font-size: 160%; }
 
 .content {
   width: 70%;
-  float: right;
   vertical-align: top; }
   .content .error {
     padding-top: 10%;
@@ -56,9 +51,5 @@ a:hover {
     font-size: 120%; }
     .content .error .title {
       font-size: 400%; }
-
-.footer {
-  float: right;
-  width: 70%; }
 
 /*# sourceMappingURL=main.css.map */
