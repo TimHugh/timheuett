@@ -5,16 +5,21 @@ require 'haml'
 
 module MyApp
 	class Application < Sinatra::Base
-		# route for root
-		get '/' do
+
+		index = lambda do
 			haml :index
 		end
 
-		# anything else gets sent to 404
-		get '/*' do
+		fourohfour = lambda do
 			status 404
 			haml :fourohfour
 		end
+
+
+		# routes
+		get '/', &index
+		get '/*', &index
+
 
 		helpers do
 			# link_to helper
