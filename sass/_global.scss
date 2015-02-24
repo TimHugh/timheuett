@@ -27,33 +27,29 @@ a:hover {
 	color: $highlight-color;
 }
 
-
-.title {
-	font-size: 150%;
-	font-weight: 200;
-	text-transform: uppercase;
-	vertical-align: top;
-}
-
-.social-links {
-	margin-top: 10px;
-
-	a {
-		@extend .socialicon;
-		font-size: 160%;
-	}
-}
-
 .left-bar {
-	float: left;
-	width: 25%;
 	vertical-align: top;
 	text-align: right;
+
+	.title {
+		font-size: 150%;
+		font-weight: 100;
+		text-transform: uppercase;
+		vertical-align: top;
+	}
+
+	.social-links {
+		margin-top: 10px;
+
+		a {
+			@extend .socialicon;
+			font-size: 160%;
+		}
+	}
 }
 
 .content {
 	width: 70%;
-	float: right;
 	vertical-align: top;
 
 	.error {
@@ -66,7 +62,3 @@ a:hover {
 	}
 }
 
-.footer {
-	float: right;
-	width: 70%;
-}
