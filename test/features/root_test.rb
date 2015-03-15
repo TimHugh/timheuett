@@ -11,5 +11,6 @@ class RootTest < MiniTest::Test
     get '/'
     assert last_response.ok?
     assert_match /Tim Heuett/, last_response.body
+    assert_match /info@timheuett.com/, last_response.body
   end
 end
