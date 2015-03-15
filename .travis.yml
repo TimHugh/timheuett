@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+- 2.2.0
+branches:
+  only:
+  - master
+deploy:
+  provider: heroku
+  app: timheuett
+  api_key:
+    secure: a2wT8H8HFeJJoPjtAvPm2tLce2fdZNzKVA9ThvNLfQqVlFEWHX4MIBH7fiSI/SIr3Iu7+ZMhLSRyntmmw31mipFCIE2EOyRtl7GoH7bO4axXQOYPAiUwETz2rU8kWgVicIFilVGUS5C0Y6bvZBk67muoDE7cQQ8fpP6uINn6NIE=
