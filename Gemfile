@@ -7,6 +7,7 @@ gem 'sinatra'
 gem 'haml'
 gem 'foreman'
 gem 'rake'
+gem 'coveralls'
 
 group :development do
 	gem 'sass'
