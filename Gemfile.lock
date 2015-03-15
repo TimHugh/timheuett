@@ -15,11 +15,14 @@ GEM
     haml (4.0.6)
       tilt
     mime-types (2.4.3)
+    minitest (5.5.1)
     multi_json (1.11.0)
     netrc (0.10.3)
     rack (1.6.0)
     rack-protection (1.5.3)
       rack
+    rack-test (0.6.3)
+      rack (>= 1.0)
     rake (10.4.2)
     rest-client (1.7.3)
       mime-types (>= 1.16, < 3.0)
@@ -51,7 +54,9 @@ DEPENDENCIES
   coveralls
   foreman
   haml
+  minitest
   rack
+  rack-test
   rake
   sass
   sinatra
