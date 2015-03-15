@@ -2,6 +2,7 @@
 
 ## Intro
 
+[![Build Status](https://travis-ci.org/TimHugh/timheuett.svg)](https://travis-ci.org/TimHugh/timheuett)
 This is the source for my personal website, at [TimHeuett.com](http://www.timheuett.com).
 
 It is still in early development stage, and has mostly been a chance to play with some new tools.
@@ -15,7 +16,7 @@ If you are learning to use some of the tools I've played with, feel free to clon
 Be sure to set the PORT and RACK_ENV variables in your environment. I just keep these in my bash profile:
 
 > export PORT=3000
-> 
+>
 > export RACK_ENV=development
 
 Then it's as simple as `bundle` and `foreman start`
