@@ -7,3 +7,6 @@
 
 # Ignore sass cache files
 .sass-cache
+
+# Ignore coveralls output
+coverage
