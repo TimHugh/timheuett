@@ -3,7 +3,7 @@
 require 'sinatra/base'
 require 'haml'
 
-module MyApp
+module Site
   class Application < Sinatra::Base
     index = lambda do
       haml :index

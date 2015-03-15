@@ -1,3 +1,3 @@
 require './app'
 
-run MyApp::Application
+run Site::Application
