@@ -7,6 +7,7 @@ GEM
       thor (~> 0.19.1)
     haml (4.0.6)
       tilt
+    minitest (5.5.1)
     rack (1.6.0)
     rack-protection (1.5.3)
       rack
@@ -29,6 +30,7 @@ PLATFORMS
 DEPENDENCIES
   foreman
   haml
+  minitest
   rack
   rake
   sass
