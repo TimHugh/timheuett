@@ -3,6 +3,8 @@
 ## Intro
 
 [![Build Status](https://travis-ci.org/TimHugh/timheuett.svg)](https://travis-ci.org/TimHugh/timheuett)
+[![Coverage Status](https://coveralls.io/repos/TimHugh/timheuett/badge.svg)](https://coveralls.io/r/TimHugh/timheuett)
+
 This is the source for my personal website, at [TimHeuett.com](http://www.timheuett.com).
 
 It is still in early development stage, and has mostly been a chance to play with some new tools.
