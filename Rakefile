@@ -2,14 +2,16 @@ task default: 'test'
 
 # setup logging
 require 'logger'
-logger = Logger.new(STDOUT)
+logger = Logger.new('logs/test.log')
 logger.level = Logger::INFO
 
 # run tests
 require 'rake/testtask'
 Rake::TestTask.new do |t|
-  t.libs << "spec"
-  t.pattern = "spec/**/*_spec.rb"
+  t.options = "-v" if ARGV.include? "-v"
+  t.libs << "."
+  t.libs << "test"
+  t.pattern = "test/**/*_test.rb"
 end
 
 # console task
