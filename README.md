@@ -10,15 +10,13 @@ The backend is written in Ruby using the Sinatra framework, and is hosted on Her
 
 ## Usage
 
-If you are learning to use some of the tools I've played with, feel free to clone this repository to try them out. I use Bundler to manage gem dependencies, and Foreman to launch the server, so startup is simple.
+If you are learning to use some of the tools I've played with, feel free to clone this repository to try them out. I use [Bundler](http://bundler.io/) to manage gem dependencies, and [Foreman](http://ddollar.github.io/foreman/) to launch the server, so startup is simple.
 
-Be sure to set the PORT and RACK_ENV variables in your environment:
+Be sure to set the PORT and RACK_ENV variables in your environment. I just keep these in my bash profile:
 
 > export PORT=3000
 > 
 > export RACK_ENV=development
-
-These are used in the `Procfile`
 
 Then it's as simple as `bundle` and `foreman start`
 
