@@ -6,6 +6,7 @@ gem 'thin'
 gem 'sinatra'
 gem 'haml'
 gem 'foreman'
+gem 'travis'
 
 group :development do
 	gem 'sass'
