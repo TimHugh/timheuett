@@ -1,19 +1,16 @@
-# Gemfile
 source 'https://rubygems.org'
 
-gem 'rack'
-gem 'thin'
-gem 'sinatra'
-gem 'haml'
-gem 'foreman'
-gem 'rake'
 gem 'coveralls'
+gem 'foreman'
+gem 'haml'
+gem 'rack'
+gem 'rake'
+gem 'sinatra'
+gem 'thin'
 
-group :development do
-	gem 'sass'
-end
-
-group :test do
+group :development, :test do
   gem 'minitest'
   gem 'rack-test'
+  gem 'sass'
+  gem 'travis'
 end
