@@ -1,31 +1,24 @@
 #!/usr/bin/env ruby
 
-require 'sinatra/base'
-require 'haml'
+require 'bundler'
+Bundler.require
 
 module Site
-  class Application < Sinatra::Base
-    index = lambda do
+  class Application < Sinatra::Application
+    configure do
+      enable :static, :method_override
+      set root: File.dirname(__FILE__)
+    end
+
+    get "/" do
       haml :index
     end
 
-    fourohfour = lambda do
-      status 404
-      haml :fourohfour
+    def link_to(text, attributes = {})
+      attr_string = attributes.map { |k, v| "#{k}=\"#{v}\"" }.join(" ")
+      "<a #{attr_string}>#{text}</a>"
     end
 
-    # routes
-    get '/', &index
-    get '/*', &index
-
-    helpers do
-      # link_to helper
-      #    Creates a link element like so: <a attr="val">text</a>
-      #    The optional attributes hash accepts "stringable" types for both key and hash
-      def link_to(text, attributes = {})
-        attr_string = attributes.map { |k, v| "#{k}=\"#{v}\"" }.join(" ")
-        "<a #{attr_string}>#{text}</a>"
-      end
-    end
+    use Rack::Deflater
   end
 end

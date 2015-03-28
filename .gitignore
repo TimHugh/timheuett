@@ -10,3 +10,7 @@
 
 # Ignore coveralls output
 coverage
+
+# Ignore .env config
+.env
+
