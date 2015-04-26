@@ -5,10 +5,13 @@ require 'logger'
 logger = Logger.new('logs/test.log')
 logger.level = Logger::INFO
 
+puts "Running rake with opts: #{ARGV}"
+
 # run tests
+require 'dotenv/tasks'
 require 'rake/testtask'
-Rake::TestTask.new do |t|
-  t.options = "-v" if ARGV.include? "-v"
+Rake::TestTask.new(:test => :dotenv) do |t|
+  t.verbose = true if ARGV.include? "-v"
   t.libs << "."
   t.libs << "test"
   t.pattern = "test/**/*_test.rb"
