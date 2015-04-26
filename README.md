@@ -1,7 +1,8 @@
 # TimHeuett.com
 
-[![Build Status](https://travis-ci.org/TimHugh/timheuett.svg)](https://travis-ci.org/TimHugh/timheuett)
-[![Coverage Status](https://coveralls.io/repos/TimHugh/timheuett/badge.svg)](https://coveralls.io/r/TimHugh/timheuett)
+[ ![Codeship Status for TimHugh/timheuett](https://codeship.com/projects/6c4cfe20-ce5f-0132-dc37-662c162fdcda/status?branch=master)](https://codeship.com/projects/76432)
+[![Code Climate](https://codeclimate.com/github/TimHugh/timheuett/badges/gpa.svg)](https://codeclimate.com/github/TimHugh/timheuett)
+[![Test Coverage](https://codeclimate.com/github/TimHugh/timheuett/badges/coverage.svg)](https://codeclimate.com/github/TimHugh/timheuett)
 
 ## Intro
 
