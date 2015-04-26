@@ -3,7 +3,14 @@ CodeClimate::TestReporter.start
 
 ENV['RACK_ENV'] = 'test'
 require 'minitest/autorun'
-require 'minitest/pride'
 require 'rack/test'
 
 require 'app'
+
+class Test < MiniTest::Test
+  include Rack::Test::Methods
+
+  def app
+    Site::Application
+  end
+end

@@ -1,12 +1,6 @@
 require 'test_helper'
 
-class RootTest < MiniTest::Test
-  include Rack::Test::Methods
-
-  def app
-    Site::Application
-  end
-
+class RootTest < Test
   def test_root_loads_and_has_content
     get '/'
     assert last_response.ok?
