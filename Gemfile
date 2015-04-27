@@ -17,5 +17,4 @@ group :development, :test do
   gem 'minitest'
   gem 'pry'
   gem 'rack-test'
-  gem 'sass'
 end
