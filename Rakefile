@@ -23,10 +23,12 @@ Rake::TestTask.new(:test => :dotenv) do |t|
 end
 
 # compile assets
-Rake::SprocketsTask.new do |t|
-  t.environment = Site::Assets.environment Site::Application.settings.root
-  t.output = './public/assets'
-  t.assets = %w( application.js application.css )
+namespace :assets do
+  Rake::SprocketsTask.new(:precompile) do |t|
+    t.environment = Site::Assets.environment Site::Application.settings.root
+    t.output = './public/assets'
+    t.assets = %w( application.js application.css )
+  end
 end
 
 # console task
