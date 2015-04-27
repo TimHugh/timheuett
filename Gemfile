@@ -6,6 +6,8 @@ gem 'foreman'
 gem 'slim'
 gem 'rack'
 gem 'rake'
+gem 'sass'
+gem 'sprockets'
 gem 'sinatra'
 gem 'thin'
 
