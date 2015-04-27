@@ -9,4 +9,10 @@
 .sass-cache
 
 # Ignore .env config
-.env
+/.env
+
+# Ignore test coverage output
+/coverage
+
+# Ignore precompiled assets
+/public/assets

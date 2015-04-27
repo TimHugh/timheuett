@@ -1,15 +1,20 @@
 task default: 'test'
 
-# setup logging
+require 'dotenv/tasks'
+require 'irb'
+require 'irb/completion'
 require 'logger'
+require 'rake/sprocketstask'
+require 'rake/testtask'
+
+Dir['./config/*.rb'].each { |file| require file }
+require './app.rb'
+
+# setup logging
 logger = Logger.new('logs/test.log')
 logger.level = Logger::INFO
 
-puts "Running rake with opts: #{ARGV}"
-
 # run tests
-require 'dotenv/tasks'
-require 'rake/testtask'
 Rake::TestTask.new(:test => :dotenv) do |t|
   t.verbose = true if ARGV.include? "-v"
   t.libs << "."
@@ -17,13 +22,18 @@ Rake::TestTask.new(:test => :dotenv) do |t|
   t.pattern = "test/**/*_test.rb"
 end
 
+# compile assets
+namespace :assets do
+  Rake::SprocketsTask.new(:precompile) do |t|
+    t.environment = Site::Assets.environment Site::Application.settings.root
+    t.output = './public/assets'
+    t.assets = %w( application.js application.css )
+  end
+end
+
 # console task
 desc "Start a console inside the app environment"
 task :console do
-  require 'irb'
-  require 'irb/completion'
-  require './app.rb'
-
   ARGV.clear
   IRB.start
 end
