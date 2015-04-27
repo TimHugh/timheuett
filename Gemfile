@@ -13,6 +13,7 @@ group :development, :test do
   gem 'codeclimate-test-reporter', require: nil
   gem 'dotenv'
   gem 'minitest'
+  gem 'pry'
   gem 'rack-test'
   gem 'sass'
 end
