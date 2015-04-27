@@ -10,3 +10,6 @@
 
 # Ignore .env config
 .env
+
+# Ignore precompiled assets
+/public/assets
