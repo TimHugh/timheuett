@@ -2,17 +2,24 @@
   "Unit Tests": {
     "coverage": {
       "/Users/tim/Projects/timheuett/app.rb": [
+        2,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
         null,
         null,
         1,
         1,
         null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
         null,
         1,
         1,
@@ -20,13 +27,27 @@
         null,
         1,
         1,
+        2,
+        null,
         null,
         null,
         1,
         null,
         null
+      ],
+      "/Users/tim/Projects/timheuett/config/assets.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1430102509
+    "timestamp": 1430103872
   }
 }
