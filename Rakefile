@@ -24,7 +24,7 @@ end
 
 # compile assets
 Rake::SprocketsTask.new do |t|
-  t.environment = Assets.environment Site::Application.settings.root
+  t.environment = Site::Assets.environment Site::Application.settings.root
   t.output = './public/assets'
   t.assets = %w( application.js application.css )
 end
