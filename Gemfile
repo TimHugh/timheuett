@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.2.2'
 
 gem 'foreman'
-gem 'haml'
+gem 'slim'
 gem 'rack'
 gem 'rake'
 gem 'sinatra'

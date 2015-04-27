@@ -10,8 +10,8 @@ module Site
       set root: File.dirname(__FILE__)
     end
 
-    get "/" do
-      haml :index
+    get '/' do
+      slim :index
     end
 
     def link_to(text, attributes = {})
