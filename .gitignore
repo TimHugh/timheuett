@@ -8,8 +8,5 @@
 # Ignore sass cache files
 .sass-cache
 
-# Ignore simplecov output
-coverage
-
 # Ignore .env config
 .env
