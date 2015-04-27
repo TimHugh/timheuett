@@ -14,6 +14,8 @@ module Site
       slim :index
     end
 
+    get '*' do
+      redirect to('/')
     end
 
     use Rack::Deflater
