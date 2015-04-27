@@ -44,14 +44,4 @@ a:hover {
     .left-bar .social-links a {
       font-size: 170%; }
 
-.content {
-  width: 70%;
-  vertical-align: top; }
-  .content .error {
-    padding-top: 10%;
-    text-align: center;
-    font-size: 120%; }
-    .content .error .title {
-      font-size: 400%; }
-
 /*# sourceMappingURL=main.css.map */
