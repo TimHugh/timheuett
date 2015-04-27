@@ -14,9 +14,6 @@ module Site
       slim :index
     end
 
-    def link_to(text, attributes = {})
-      attr_string = attributes.map { |k, v| "#{k}=\"#{v}\"" }.join(" ")
-      "<a #{attr_string}>#{text}</a>"
     end
 
     use Rack::Deflater
