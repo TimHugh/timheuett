@@ -1,8 +1,7 @@
 Dir['./config/*.rb'].each { |file| require file }
 
 require 'bundler'
-# Bundler.require(:default, ENV['RACK_ENV'].to_sym)
-Bundler.require(:default, :development)
+Bundler.require(:default, ENV['RACK_ENV'].to_sym)
 
 module Site
   class Application < Sinatra::Application
