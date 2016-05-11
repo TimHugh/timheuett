@@ -64,3 +64,6 @@ DEPENDENCIES
   slim
   sprockets
   thin
+
+BUNDLED WITH
+   1.11.2

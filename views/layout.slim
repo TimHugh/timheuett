@@ -9,9 +9,9 @@ html
 		meta name='google-site-verification' content='np9swQ0l4xJOzamam9r2NOtW2Fc33vvVulZmRiU_tlg'
 
 		link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet'
-		link href="#{asset_path('application.css')}" rel='stylesheet'
+		link href="#{ asset_path('application.css') }" rel='stylesheet'
 
-		script src="#{asset_path('application.js')}" type='text/javascript'
+		script src="#{ asset_path('application.js') }" type='text/javascript'
 	body
 		.left-bar
 			== slim :left_bar

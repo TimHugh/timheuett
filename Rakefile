@@ -1,14 +1,13 @@
 task default: 'test'
 
-unless ENV['RACK_ENV'] == 'production'
-  require 'dotenv/tasks'
-  require 'irb'
-  require 'irb/completion'
-end
+require 'dotenv/tasks'
+require 'irb'
+require 'irb/completion'
 require 'rake/sprocketstask'
 require 'rake/testtask'
 require 'logger'
 
+ENV['RACK_ENV'] ||= 'test'
 Dir['./config/*.rb'].each { |file| require file }
 require './app.rb'
 
@@ -27,7 +26,7 @@ end
 # compile assets
 namespace :assets do
   Rake::SprocketsTask.new(:precompile) do |t|
-    t.environment = Site::Assets.environment Site::Application.settings.root
+    t.environment = Site::Assets.environment Site::Application.root
     t.output = './public/assets'
     t.assets = %w( application.js application.css )
   end
@@ -38,4 +37,10 @@ desc "Start a console inside the app environment"
 task :console do
   ARGV.clear
   IRB.start
+end
+
+# server with rerun
+desc "Start a development server"
+task :server do
+  system "bundle exec rerun 'bundle exec foreman start'"
 end
