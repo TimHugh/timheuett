@@ -1,13 +1,15 @@
 task default: 'test'
 
-require 'dotenv/tasks'
-require 'irb'
-require 'irb/completion'
+ENV['RACK_ENV'] ||= 'test'
+unless ENV['RACK_ENV'] == 'production'
+  require 'dotenv/tasks'
+  require 'irb'
+  require 'irb/completion'
+end
 require 'rake/sprocketstask'
 require 'rake/testtask'
 require 'logger'
 
-ENV['RACK_ENV'] ||= 'test'
 Dir['./config/*.rb'].each { |file| require file }
 require './app.rb'
 
