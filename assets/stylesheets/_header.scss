@@ -1,0 +1,22 @@
+.header {
+	vertical-align: top;
+	text-align: right;
+	width: 25%;
+	min-width: 200px;
+
+	&__title {
+    font-family: $heading-fonts;
+		font-size: 200%;
+		font-weight: 100;
+    margin-bottom: .1em;
+		text-transform: uppercase;
+		vertical-align: top;
+	}
+
+	&__social-links a {
+		@extend .socialicon;
+
+    font-size: 200%;
+    margin-left: 0.1em;
+	}
+}

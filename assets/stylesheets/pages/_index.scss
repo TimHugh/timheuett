@@ -1,0 +1,33 @@
+.index {
+  width: 100%;
+
+  & > div {
+    padding-top: 50px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .content {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  @media #{$desktop} {
+    display: flex;
+
+    .header {
+      flex-grow: 1;
+      text-align: right;
+    }
+    .content {
+      flex-grow: 1.25;
+      max-width: 60%;
+      text-align: left;
+    }
+    .header,
+    .content {
+      padding: 10% 5%;
+      width: auto;
+    }
+  }
+}

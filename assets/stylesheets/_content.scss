@@ -1,0 +1,16 @@
+.content {
+  p {
+    font-family: $body-fonts;
+    font-weight: 200;
+    line-height: 1.5;
+    margin-bottom: 1.2em;
+
+    @media #{$desktop} {
+      line-height: 1.2;
+    }
+  }
+
+  a {
+    border-bottom: solid 1px $green;
+  }
+}

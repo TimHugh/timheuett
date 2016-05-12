@@ -15,6 +15,7 @@ module Site
     end
 
     get '/' do
+      @page_class = 'index'
       slim :index
     end
 
@@ -25,6 +26,10 @@ module Site
     helpers do
       def asset_path(file)
         "assets/#{settings.assets[file].digest_path}"
+      end
+
+      def page_class
+        @page_class
       end
     end
 

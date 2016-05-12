@@ -1,47 +1,35 @@
 @import "socialicons";
+@import "breakpoints";
 
-$bg-color: #fff;
-$font-color: #666;
-$highlight-color: #84c66f;
-$font-stack: "Raleway", "Helvetica Neue", "Helvetica", Sans-Serif;
+$white: #fff;
+$gray: #666;
+$green: #84c66f;
+
+$heading-fonts: "Helvetica Neue", "Helvetica", Sans-Serif;
+$body-fonts: "Lato", "Helvetica Neue", "Helvetica", Sans-Serif;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-	background: $bg-color;
-	color: $font-color;
-	font-size: 140%;
-	font-family: $font-stack;
+	background: $white;
+	color: $gray;
+  font-size: 125%;
 
-	padding: 100px 10%;
+  @media #{$desktop} {
+    font-size: 100%;
+  }
 }
 
 a {
-	color: $font-color;
-	text-decoration: none;
+	color: $gray;
+  text-decoration: none;
 	cursor: pointer;
-}
-a:hover {
-	color: $highlight-color;
-}
 
-.left-bar {
-	vertical-align: top;
-	text-align: right;
-	width: 25%;
-	min-width: 200px;
-
-	.title {
-		font-size: 150%;
-		font-weight: 100;
-		text-transform: uppercase;
-		vertical-align: top;
-	}
-
-	.social-links {
-		margin-top: 10px;
-
-		a {
-			@extend .socialicon;
-			font-size: 170%;
-		}
-	}
+  &:hover {
+    color: $green;
+  }
 }

@@ -3,18 +3,18 @@ html
 	head
 		meta charset='utf-8'
 		title Tim Heuett - Seattle Web Design
-		meta name='description' content='Tim Heuett is a Seattle-based web designer, developer, and expert at useless trivia'
+		meta name='description' content='Tim Heuett is a Seattle-based web developer, and an expert at useless trivia'
 		meta name='author' content='Tim Heuett'
 		meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'
 		meta name='google-site-verification' content='np9swQ0l4xJOzamam9r2NOtW2Fc33vvVulZmRiU_tlg'
 
-		link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet'
+    link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'
 		link href="#{ asset_path('application.css') }" rel='stylesheet'
 
 		script src="#{ asset_path('application.js') }" type='text/javascript'
-	body
-		.left-bar
-			== slim :left_bar
+	body class="#{ page_class }"
+		.header
+			== slim :header
 
 		.content
 			== yield
