@@ -14,7 +14,10 @@
 
   @media #{$desktop} {
     display: flex;
-    align-items: center;
+    padding-top: 15%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 
     .header {
       flex-grow: 1;
@@ -27,7 +30,7 @@
     }
     .header,
     .content {
-      padding: 10% 5%;
+      padding: 5%;
       width: auto;
     }
   }

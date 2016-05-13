@@ -16,3 +16,19 @@
     -o-font-smoothing: antialiased;
     font-smoothing: antialiased;
 }
+
+.socialicon {
+
+  &--twitter:before {
+    content: '\e286';
+  }
+  &--github:before {
+    content: '\e236';
+  }
+  &--linkedin:before {
+    content: '\e252';
+  }
+  &--email:before {
+    content: '\e224';
+  }
+}
