@@ -14,6 +14,10 @@ $body-fonts: "Lato", "Helvetica Neue", "Helvetica", Sans-Serif;
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
 	background: $white;
 	color: $gray;
