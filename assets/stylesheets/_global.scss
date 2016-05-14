@@ -14,14 +14,18 @@ $body-fonts: "Lato", "Helvetica", Sans-Serif;
   padding: 0;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
 	background: $white;
 	color: $gray;
   font-size: 125%;
+
+  animation: fade-in-delay 1.5s;
+
+  @keyframes fade-in-delay {
+    0%   { opacity: 0; }
+    10%  { opacity: 0; }
+    100% { opacity: 1; }
+  }
 
   @media #{$desktop} {
     font-size: 100%;
@@ -32,6 +36,10 @@ a {
 	color: $gray;
   text-decoration: none;
 	cursor: pointer;
+
+  transition-property: color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 
   &:hover {
     color: $green;
