@@ -13,10 +13,14 @@
 		vertical-align: top;
 	}
 
-	&__social-links a {
-		@extend .socialicon;
+	&__social-links {
+    margin-top: 0.9em;
 
-    font-size: 200%;
-    margin-left: 0.1em;
-	}
+    a {
+  		@extend .socialicon;
+
+      font-size: 210%;
+      margin-left: 0.1em;
+  	}
+  }
 }
