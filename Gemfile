@@ -2,13 +2,14 @@ source 'https://rubygems.org'
 
 ruby '2.3.1'
 
+gem 'autoprefixer-rails'
 gem 'foreman'
-gem 'slim'
 gem 'rack'
 gem 'rake'
 gem 'sass'
-gem 'sprockets'
 gem 'sinatra'
+gem 'slim'
+gem 'sprockets'
 gem 'thin'
 
 group :development, :test do
