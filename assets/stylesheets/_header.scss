@@ -13,12 +13,8 @@
 		vertical-align: top;
 	}
 
-	&__social-links {
-    margin-top: 0.9em;
-
-    a {
-      font-size: 210%;
-      margin-left: 0.1em;
-  	}
+	&__social-links a {
+    font-size: 210%;
+    margin-left: 0.1em;
   }
 }
