@@ -1,10 +1,72 @@
-(function(){
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-54742901-1', 'timheuett.com');
-  ga('require', 'displayfeatures');
-  ga('require', 'linkid', 'linkid.js');
-  ga('send', 'pageview');
-})();
+/**
+ * Creates a temporary global ga object and loads analytics.js.
+ * Parameters o, a, and m are all used internally. They could have been
+ * declared using 'var', instead they are declared as parameters to save
+ * 4 bytes ('var ').
+ *
+ * @param {Window}        i The global context object.
+ * @param {HTMLDocument}  s The DOM document object.
+ * @param {string}        o Must be 'script'.
+ * @param {string}        g Protocol relative URL of the analytics.js script.
+ * @param {string}        r Global name of analytics object. Defaults to 'ga'.
+ * @param {HTMLElement}   a Async script tag.
+ * @param {HTMLElement}   m First script tag in document.
+ */
+(function(i, s, o, g, r, a, m){
+  i['GoogleAnalyticsObject'] = r; // Acts as a pointer to support renaming.
+
+  // Creates an initial ga() function.
+  // The queued commands will be executed once analytics.js loads.
+  i[r] = i[r] || function() {
+    (i[r].q = i[r].q || []).push(arguments)
+  },
+
+  // Sets the time (as an integer) this tag was executed.
+  // Used for timing hits.
+  i[r].l = 1 * new Date();
+
+  // Insert the script tag asynchronously.
+  // Inserts above current tag to prevent blocking in addition to using the
+  // async attribute.
+  a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0];
+  a.async = 1;
+  a.src = g;
+  m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+// Creates a default tracker with automatic cookie domain configuration.
+ga('create', 'UA-54742901-1', 'timheuett.com');
+
+// Add displayFeatures plugin for additional demographic data
+ga('require', 'displayfeatures');
+
+// Sends a pageview hit from the tracker just created.
+ga('send', 'pageview');
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  // Add event tracking to the click event on outbound links
+  var links = document.getElementsByTagName('a');
+  for(var i = 0; i < links.length; i++) {
+    links[i].onclick = function(e) {
+      var url = e.target.href;
+
+      // Prevent navigation (to allow GA time to submit event)
+      e.preventDefault();
+
+      // Set a fallback, in case analytics.js has not been loaded.
+      setTimeout(function() {
+        document.location = url;
+      }, 1000);
+
+      // Submit the event to GA
+      ga('send', 'event', 'outbound', 'click', url, {
+        transport: 'beacon',
+        hitCallback: function() { document.location = url; }
+      });
+    };
+  }
+
+});
