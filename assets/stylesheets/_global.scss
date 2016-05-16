@@ -7,7 +7,8 @@ $green: #84c66f;
 $heading-fonts: "Lato", "Helvetica", Sans-Serif;
 $body-fonts: "Lato", "Helvetica", Sans-Serif;
 
-* {
+body,
+body * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;

@@ -11,6 +11,7 @@ gem 'sinatra'
 gem 'slim'
 gem 'sprockets'
 gem 'thin'
+gem 'uglifier'
 
 group :development, :test do
   gem 'codeclimate-test-reporter', require: nil

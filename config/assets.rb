@@ -3,6 +3,8 @@ module Site
     def self.environment root_path
       @environment ||= (Sprockets::Environment.new root_path).tap do |env|
         env.append_path 'assets/fonts'
+
+        env.js_compressor = :uglifier
         env.append_path 'assets/javascripts'
 
         env.css_compressor = :scss
