@@ -14,13 +14,18 @@ module Site
       set :assets, Site::Assets.environment(settings.root)
     end
 
-    get '/' do
+    def render_index
       @page_class = 'index'
       slim :index
     end
 
+    get '/' do
+      render_index
+    end
+
     get '*' do
-      redirect to('/')
+      status 404
+      render_index
     end
 
     helpers do

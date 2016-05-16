@@ -8,9 +8,8 @@ class RootTest < Test
     assert_match /info@timheuett.com/, last_response.body
   end
 
-  def test_miss_redirects_to_root
+  def test_miss_returns_404
     get '/whatever'
-    assert last_response.redirect?
-    assert_equal 'http://example.org/', last_response.location
+    assert last_response.not_found?
   end
 end
