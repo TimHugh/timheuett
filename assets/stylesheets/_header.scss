@@ -10,7 +10,15 @@
 		font-weight: 100;
     margin-bottom: .1em;
 		text-transform: uppercase;
-		vertical-align: top;
+    vertical-align: top;
+
+    // Slightly bolder text for retina displays using a shadow.
+    // NOTE: this is only necessary because Lato doesn't
+    // have an appropriate weight.
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      text-shadow: 0 0 1px lighten($gray, 30);
+    }
 	}
 
 	&__social-links a {
